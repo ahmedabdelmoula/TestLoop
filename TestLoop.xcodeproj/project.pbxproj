@@ -120,14 +120,14 @@
 		BF33570726E91B94004295F6 /* TestLoop */ = {
 			isa = PBXGroup;
 			children = (
+				BF33571626E91B95004295F6 /* Info.plist */,
 				BFB2A77026EB69330006F103 /* Common */,
 				BFB2A76F26EB69260006F103 /* Assets */,
-				BFB2A76E26EB68CC0006F103 /* Helpers */,
 				BFB2A76D26EB68BD0006F103 /* Models */,
-				BFB2A76C26EB688D0006F103 /* Controllers */,
 				BFB2A76B26EB68800006F103 /* ViewModels */,
 				BFB2A76A26EB68750006F103 /* Views */,
-				BF33571626E91B95004295F6 /* Info.plist */,
+				BFB2A76C26EB688D0006F103 /* Controllers */,
+				BFB2A76E26EB68CC0006F103 /* Helpers */,
 			);
 			path = TestLoop;
 			sourceTree = "<group>";

@@ -32,7 +32,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         setupCollectionViews()
         setupCollectionViewsLayout()
@@ -40,6 +39,7 @@ class HomeViewController: UIViewController {
     
 }
 
+// MARK: - Setting Up Views
 extension HomeViewController{
     fileprivate func setupUI() {
         DispatchQueue.main.async { [weak self] in
@@ -50,9 +50,6 @@ extension HomeViewController{
         }
     }
     
-}
-
-extension HomeViewController{
     fileprivate func setupCollectionViews() {
         topMoviesCollectionView.delegate = self
         topMoviesCollectionView.dataSource = self
@@ -75,6 +72,7 @@ extension HomeViewController{
     }
 }
 
+// MARK: - UICollectionView Data Source Methods
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
@@ -110,6 +108,7 @@ extension HomeViewController: UICollectionViewDataSource{
     }
 }
 
+// MARK: - UICollectionView Delegate Methods
 extension HomeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView {
@@ -139,6 +138,7 @@ extension HomeViewController: UICollectionViewDelegate{
     }
 }
 
+// MARK: - UICollectionViewLayout Delegate Methods
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
@@ -154,6 +154,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
+// MARK: - UICollectionViewHorizontalGridLayout Delegate Methods
 extension HomeViewController: CollectionViewDelegateHorizontalGridLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, numberOfRowsForSection section: Int) -> Int {
         return 2

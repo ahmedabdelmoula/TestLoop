@@ -38,6 +38,7 @@ class MovieViewController: UIViewController {
     }
 }
 
+// MARK: - Setting Up Views
 extension MovieViewController{
     fileprivate func setupUI() {
         movieImgView.hero.id = heroImgID
@@ -89,6 +90,7 @@ extension MovieViewController{
     }
 }
 
+// MARK: -  Items Actions
 extension MovieViewController{
     @objc fileprivate func dismissVC(){
         self.dismiss(animated: true, completion: nil)

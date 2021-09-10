@@ -20,7 +20,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6J-rJ-0Et">
                         <rect key="frame" x="5" y="5" width="189" height="288"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-J8-TOJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-J8-TOJ">
                                 <rect key="frame" x="0.0" y="0.0" width="189" height="288"/>
                             </imageView>
                         </subviews>
@@ -50,7 +50,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="test_image" width="750" height="1000"/>
+        <image name="movie_placeholder" width="2048" height="3072"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

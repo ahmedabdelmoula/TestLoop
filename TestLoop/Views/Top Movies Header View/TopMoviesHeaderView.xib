@@ -17,7 +17,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k90-4S-Kgc">
                     <rect key="frame" x="0.0" y="0.0" width="459" height="264"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="B39-Ro-Ir5">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="B39-Ro-Ir5">
                             <rect key="frame" x="0.0" y="0.0" width="459" height="264"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8D7-EV-SaU" customClass="GradientView" customModule="TestLoop" customModuleProvider="target">
@@ -78,7 +78,7 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="test_image" width="750" height="1000"/>
+        <image name="movie_placeholder" width="2048" height="3072"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

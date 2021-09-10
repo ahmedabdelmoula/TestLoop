@@ -30,23 +30,9 @@ class TopMoviesViewController: UIViewController {
         setupCollectionViewLayout()
     }
     
-    fileprivate func setupCollectionViewLayout() {
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionInset = .init(top: padding, left: padding, bottom: padding, right: padding)
-        }
-    }
-    
-    fileprivate func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.register(UINib(nibName: String(describing: TopMovieCollectionViewCell.self), bundle: .main), forCellWithReuseIdentifier: topMovieCellId)
-        collectionView.register(UINib(nibName: String(describing: TopMoviesHeaderView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
-        
-    }
-    
 }
 
+// MARK: - Setting Up Views
 extension TopMoviesViewController{
     fileprivate func setupUI() {
         if let selected = self.selectedTopMovies{
@@ -61,8 +47,23 @@ extension TopMoviesViewController{
     @objc fileprivate func dismissVC(){
         self.dismiss(animated: true, completion: nil)
     }
+    
+    fileprivate func setupCollectionViewLayout() {
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = .init(top: padding, left: padding, bottom: padding, right: padding)
+        }
+    }
+    
+    fileprivate func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.register(UINib(nibName: String(describing: TopMovieCollectionViewCell.self), bundle: .main), forCellWithReuseIdentifier: topMovieCellId)
+        collectionView.register(UINib(nibName: String(describing: TopMoviesHeaderView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+    }
 }
 
+// MARK: - UICollectionView Data Source Methods
 extension TopMoviesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return topMoviesViewModel.moviesArray.count
@@ -89,6 +90,7 @@ extension TopMoviesViewController: UICollectionViewDataSource{
     }
 }
 
+// MARK: - UICollectionView Delegate Methods
 extension TopMoviesViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? TopMovieCollectionViewCell{
@@ -106,6 +108,7 @@ extension TopMoviesViewController: UICollectionViewDelegate{
     }
 }
 
+// MARK: - UICollectionViewLayout Delegate Methods
 extension TopMoviesViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .init(width: collectionView.frame.width, height: self.view.frame.height * 0.4)
@@ -120,6 +123,7 @@ extension TopMoviesViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
+// MARK: - UIScrollView Delegate Methods
 extension TopMoviesViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let layout = collectionView.collectionViewLayout as? StretchyHeaderLayout else { return }
