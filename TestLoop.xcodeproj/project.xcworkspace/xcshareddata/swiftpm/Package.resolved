@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BouncyLayout",
+        "repositoryURL": "https://github.com/roberthein/BouncyLayout",
+        "state": {
+          "branch": null,
+          "revision": "72773ac14234f30913dd0b207d76bcc39fff64fa",
+          "version": "2.3.1"
+        }
+      },
+      {
+        "package": "Hero",
+        "repositoryURL": "https://github.com/HeroTransitions/Hero",
+        "state": {
+          "branch": null,
+          "revision": "efa709686035831b23b7bf58f652b0c4b892aa1d",
+          "version": "1.6.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
