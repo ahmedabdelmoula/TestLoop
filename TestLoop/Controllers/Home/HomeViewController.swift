@@ -132,6 +132,13 @@ extension HomeViewController: UICollectionViewDelegate{
         default:
             if let cell = collectionView.cellForItem(at: indexPath) as? HomeTVShowsCollectionViewCell{
                 cell.shake()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
+                    guard let self = self else { return }
+                    let loginVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                    loginVC.modalPresentationStyle = .fullScreen
+                    loginVC.modalTransitionStyle = .flipHorizontal
+                    self.present(loginVC, animated: true, completion: nil)
+                }
             }
             break
         }

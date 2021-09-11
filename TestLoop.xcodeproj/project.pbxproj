@@ -23,6 +23,10 @@
 		BF3D8C2426EA1227005DA8EE /* HomeMoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3D8C2226EA1227005DA8EE /* HomeMoviesCollectionViewCell.xib */; };
 		BF3D8C2726EA1374005DA8EE /* HomeTVShowsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D8C2526EA1374005DA8EE /* HomeTVShowsCollectionViewCell.swift */; };
 		BF3D8C2826EA1374005DA8EE /* HomeTVShowsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3D8C2626EA1374005DA8EE /* HomeTVShowsCollectionViewCell.xib */; };
+		BF6713AC26EC9B53006D543F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6713AB26EC9B53006D543F /* LoginViewController.swift */; };
+		BF6713AF26ECA836006D543F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BF6713AE26ECA836006D543F /* Lottie */; };
+		BF6713B126ECA893006D543F /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6713B026ECA893006D543F /* CommentsViewController.swift */; };
+		BF6713B426ECAA1A006D543F /* empty_popcorn.json in Resources */ = {isa = PBXBuildFile; fileRef = BF6713B326ECAA1A006D543F /* empty_popcorn.json */; };
 		BF760D7D26EB9C1600438D19 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760D7C26EB9C1600438D19 /* Movie.swift */; };
 		BF760D7F26EB9E3400438D19 /* TopMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760D7E26EB9E3400438D19 /* TopMoviesViewModel.swift */; };
 		BF760D8126EB9E8A00438D19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760D8026EB9E8A00438D19 /* HomeViewModel.swift */; };
@@ -73,6 +77,9 @@
 		BF3D8C2226EA1227005DA8EE /* HomeMoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		BF3D8C2526EA1374005DA8EE /* HomeTVShowsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVShowsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF3D8C2626EA1374005DA8EE /* HomeTVShowsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVShowsCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF6713AB26EC9B53006D543F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF6713B026ECA893006D543F /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		BF6713B326ECAA1A006D543F /* empty_popcorn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_popcorn.json; sourceTree = "<group>"; };
 		BF760D7C26EB9C1600438D19 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BF760D7E26EB9E3400438D19 /* TopMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModel.swift; sourceTree = "<group>"; };
 		BF760D8026EB9E8A00438D19 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 			files = (
 				BFA4007626EBCC0600CAA189 /* BouncyLayout in Frameworks */,
 				BFA4007126EBCB6100CAA189 /* Hero in Frameworks */,
+				BF6713AF26ECA836006D543F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +177,22 @@
 			path = "Home TV Shows Cell";
 			sourceTree = "<group>";
 		};
+		BF6713AA26EC9B34006D543F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF6713AB26EC9B53006D543F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF6713B226ECAA0D006D543F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				BF6713B326ECAA1A006D543F /* empty_popcorn.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		BFA4007926EBCD3E00CAA189 /* CollectionViewGridLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +238,7 @@
 		BFB2A76C26EB688D0006F103 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF6713AA26EC9B34006D543F /* Login */,
 				BFB2A77326EB69800006F103 /* Movie Details */,
 				BFB2A77226EB696A0006F103 /* Top Movies */,
 				BFB2A77126EB69600006F103 /* Home */,
@@ -233,9 +258,10 @@
 		BFB2A76E26EB68CC0006F103 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BF6713B226ECAA0D006D543F /* Animations */,
+				BFCC7EBE26EA42D00076576D /* Extensions.swift */,
 				BFA4007926EBCD3E00CAA189 /* CollectionViewGridLayout */,
 				BF3D8C1526E9FFA1005DA8EE /* StretchyHeaderLayout.swift */,
-				BFCC7EBE26EA42D00076576D /* Extensions.swift */,
 				BF760D8426EBAB9600438D19 /* DummyData.swift */,
 			);
 			path = Helpers;
@@ -277,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				BF33571E26E93097004295F6 /* MovieViewController.swift */,
+				BF6713B026ECA893006D543F /* CommentsViewController.swift */,
 			);
 			path = "Movie Details";
 			sourceTree = "<group>";
@@ -310,6 +337,7 @@
 			packageProductDependencies = (
 				BFA4007026EBCB6100CAA189 /* Hero */,
 				BFA4007526EBCC0600CAA189 /* BouncyLayout */,
+				BF6713AE26ECA836006D543F /* Lottie */,
 			);
 			productName = TestLoop;
 			productReference = BF33570526E91B94004295F6 /* TestLoop.app */;
@@ -341,6 +369,7 @@
 			packageReferences = (
 				BFA4006F26EBCB6100CAA189 /* XCRemoteSwiftPackageReference "Hero" */,
 				BFA4007426EBCC0600CAA189 /* XCRemoteSwiftPackageReference "BouncyLayout" */,
+				BF6713AD26ECA836006D543F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = BF33570626E91B94004295F6 /* Products */;
 			projectDirPath = "";
@@ -361,6 +390,7 @@
 				BF3D8C2826EA1374005DA8EE /* HomeTVShowsCollectionViewCell.xib in Resources */,
 				BF3D8C2026EA1055005DA8EE /* HomeTopMoviesCollectionViewCell.xib in Resources */,
 				BF3D8C2426EA1227005DA8EE /* HomeMoviesCollectionViewCell.xib in Resources */,
+				BF6713B426ECAA1A006D543F /* empty_popcorn.json in Resources */,
 				BF33571526E91B95004295F6 /* LaunchScreen.storyboard in Resources */,
 				BF33571226E91B95004295F6 /* Assets.xcassets in Resources */,
 				BF33571026E91B94004295F6 /* Main.storyboard in Resources */,
@@ -374,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6713AC26EC9B53006D543F /* LoginViewController.swift in Sources */,
 				BF760D7D26EB9C1600438D19 /* Movie.swift in Sources */,
+				BF6713B126ECA893006D543F /* CommentsViewController.swift in Sources */,
 				BF3D8C1626E9FFA1005DA8EE /* StretchyHeaderLayout.swift in Sources */,
 				BFA4007E26EBCD4F00CAA189 /* CollectionViewGridLayout.swift in Sources */,
 				BF33570926E91B94004295F6 /* AppDelegate.swift in Sources */,
@@ -597,6 +629,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BF6713AD26ECA836006D543F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
 		BFA4006F26EBCB6100CAA189 /* XCRemoteSwiftPackageReference "Hero" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HeroTransitions/Hero";
@@ -616,6 +656,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BF6713AE26ECA836006D543F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6713AD26ECA836006D543F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		BFA4007026EBCB6100CAA189 /* Hero */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BFA4006F26EBCB6100CAA189 /* XCRemoteSwiftPackageReference "Hero" */;

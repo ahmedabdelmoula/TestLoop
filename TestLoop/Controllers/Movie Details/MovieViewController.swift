@@ -97,7 +97,9 @@ extension MovieViewController{
     }
     
     @objc fileprivate func showComments(){
-        self.commentView.shake()
+        let commentsVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "CommentsViewController") as! CommentsViewController
+        commentsVC.modalPresentationStyle = .fullScreen
+        self.present(commentsVC, animated: true, completion: nil)
     }
     
     @objc fileprivate func loadingTrailerAnimation(){

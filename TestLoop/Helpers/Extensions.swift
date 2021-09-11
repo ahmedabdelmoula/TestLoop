@@ -40,4 +40,35 @@ extension UIView {
         animation.values = [-10.0, 10.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
     }
+    
+    var boundsCenter: CGPoint {
+        return CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+    }
+}
+
+// MARK: - UITextField Extension
+@IBDesignable
+extension UITextField {
+
+    @IBInspectable var paddingLeftCustom: CGFloat {
+        get {
+            return leftView!.frame.size.width
+        }
+        set {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: frame.size.height))
+            leftView = paddingView
+            leftViewMode = .always
+        }
+    }
+
+    @IBInspectable var paddingRightCustom: CGFloat {
+        get {
+            return rightView!.frame.size.width
+        }
+        set {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: frame.size.height))
+            rightView = paddingView
+            rightViewMode = .always
+        }
+    }
 }
