@@ -14,7 +14,6 @@ class CommentsViewController: UIViewController {
     
     let emptyAnimation = AnimationView(name: "empty_list")
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
