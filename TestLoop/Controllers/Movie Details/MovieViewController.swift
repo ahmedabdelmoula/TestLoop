@@ -97,9 +97,14 @@ extension MovieViewController{
     }
     
     @objc fileprivate func showComments(){
+        self.commentImg.isHidden = true
+        self.commentLbl.isHidden = true
         let commentsVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "CommentsViewController") as! CommentsViewController
         commentsVC.modalPresentationStyle = .fullScreen
-        self.present(commentsVC, animated: true, completion: nil)
+        self.present(commentsVC, animated: true, completion: {
+            self.commentImg.isHidden = false
+            self.commentLbl.isHidden = false
+        })
     }
     
     @objc fileprivate func loadingTrailerAnimation(){

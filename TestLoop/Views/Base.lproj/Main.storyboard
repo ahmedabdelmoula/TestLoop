@@ -398,6 +398,8 @@
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                                         <color key="value" systemColor="systemOrangeColor"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showComnt"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cJ9-ia-pMV" customClass="GradientView" customModule="TestLoop" customModuleProvider="target">
@@ -581,7 +583,14 @@
                             <constraint firstItem="MFF-8g-0xN" firstAttribute="leading" secondItem="ACl-qV-Gn0" secondAttribute="leading" constant="8" id="m1b-VK-jNg"/>
                             <constraint firstItem="MFF-8g-0xN" firstAttribute="top" secondItem="ACl-qV-Gn0" secondAttribute="top" constant="8" id="tdm-uS-P9W"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showComnt"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="emptyView" destination="6GF-LC-Jvg" id="okt-sT-wBA"/>
                     </connections>
