@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var pwdTxtField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
@@ -31,9 +31,9 @@ extension LoginViewController{
             guard let self = self else { return }
             
             self.emailTxtField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
             self.pwdTxtField.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
             
             self.emailTxtField.layer.borderWidth = 1
             self.emailTxtField.layer.borderColor = UIColor.white.cgColor
